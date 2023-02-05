@@ -9,6 +9,7 @@ double divide(int&x, int& y){
 
 //calculates, or asks again if invalid response
 void calculator(int& x, int& y, std::string& action){
+  bool rightInput = false;
   while(!rightInput){
     int input =0;
     if(action == "add"){             //Addition
@@ -50,7 +51,7 @@ void calculator(int& x, int& y, std::string& action){
         std::cout<< "\nInvalid input.\n";
       }
     }
-    std::cout<< "Your input is invalid, try again.\nWould you like"
+    std::cout<< "Your input is invalid, try again.\nWould you like "
              << "these numbers to 'add', 'subtract', 'multiply', or 'divide'? ";
     std::cin >> action;
     calculator(x, y , action);
@@ -62,7 +63,6 @@ int main() {
   int x;
   int y;
   std::string action;
-  bool rightInput = false;
   // get user Input
   std::cout << "Enter the first number: ";
   std::cin >> x;
