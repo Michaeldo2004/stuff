@@ -1,5 +1,5 @@
 #include <iostream>
-#include "calculator.cc"
+#include "calculator.h"
 
 int main() {
   int x;
@@ -10,7 +10,13 @@ int main() {
   std::cin >> x;
   std::cout << "\nEnter the second number: ";
   std::cin >> y;
+  while(true){
   std::cout<< "\nWould you like these numbers to 'add', 'subtract', 'multiply', or 'divide'? ";
   std::cin >> action;
+  if(action == "add" || action == "subtract" || action == "multiply" || action == "divide"){
   calculator(x, y, action);
+    break;
+    }
+    
+    }
   }
